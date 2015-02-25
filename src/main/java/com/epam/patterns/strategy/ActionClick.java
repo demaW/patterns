@@ -19,5 +19,6 @@ public class ActionClick {
 
     public void changeStrategy(ClickingStrategy clickingStrategyNew){
         clickingStrategy = clickingStrategyNew;
+
     }
 }
