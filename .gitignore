@@ -7,3 +7,5 @@
 # if you remove the above rule, at least ignore the following:
 
 .target/
+
+workspace.xml
