@@ -10,7 +10,7 @@ public class StrategyMain {
     public static void main(String[] args){
         WebDriver driver = new FirefoxDriver();
         driver.get("https://www.wikipedia.org/");
-        By locator = By.xpath("//form[@class='search-form']//input[@class='formBtn']");
+        By locator = By.xpath("//form[@class='search-form']//button[@class='formBtn']");
 
         ActionClick click = new ActionClick(driver,locator);
         click.performClick();
