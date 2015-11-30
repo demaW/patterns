@@ -19,20 +19,4 @@ public class DesiredCapabilitiesNoDB extends DesiredCapabilitiesBuilder {
         capabilities.setCapability("databaseEnabled", false);
     }
 
-    public static class BuilderMain {
-        public static void main(String[] args){
-            DesiredCapabilitiesNoDB capabilitiesNoDB = new DesiredCapabilitiesNoDB();
-
-            GetDesiredCapabilities capabilities = new GetDesiredCapabilities();
-
-            capabilities.setCapabilitiesBuilder(capabilitiesNoDB);
-
-            capabilities.constructCapabilities();
-
-            DesiredCapabilities desiredCapabilities = capabilities.getCapabilities();
-
-            System.out.println("DataBase status:" + desiredCapabilities.getCapability("databaseEnabled"));
-            System.out.println("Javascript status:" + desiredCapabilities.getCapability("javascriptEnabled"));
-        }
-    }
 }
