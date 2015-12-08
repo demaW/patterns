@@ -5,7 +5,10 @@ public class AFactoryMain {
         IFactory simpleFactory = new SimpleFactory();
         IFactory jsFactory = new JSFactory();
 
-        Buttons button = simpleFactory.getButton();
-        System.out.println(button instanceof SimpleButton);
+        Element button = simpleFactory.getButton();
+        button.click();
+
+        Element jsInput = jsFactory.getInput();
+        jsInput.click();
     }
 }

@@ -3,12 +3,12 @@ package com.epam.patterns.abstractfactory;
 public class SimpleFactory implements IFactory {
 
     @Override
-    public Buttons getButton() {
+    public Button getButton() {
         return new SimpleButton();
     }
 
     @Override
-    public Inputs getInputs() {
+    public Inputs getInput() {
         return new SimpleInput();
     }
 }
