@@ -2,7 +2,6 @@ package com.epam.patterns.template;
 
 public abstract class SysTemFan {
     int cores;
-    int fanQuantity;
     int fanSpeed;
 
     public SysTemFan(int cores, int fanSpeed) {
@@ -23,7 +22,6 @@ public abstract class SysTemFan {
         System.out.println("Fan quantity calculated");
         fanSpeedSetting();
         System.out.println("Fan speed level is: " + fanSpeed);
-
     }
 
 }
