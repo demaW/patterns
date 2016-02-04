@@ -1,32 +1,12 @@
 package com.epam.patterns.bridge;
 
-public class Employee implements IEmployee {
-    private int ID;
-    private String name;
+public abstract class Employee {
 
-    public Employee(int ID, String name) {
-        this.ID = ID;
-        this.name = name;
+    protected IDataSaver dataSaver;
+
+    public Employee(IDataSaver dataSaver) {
+        this.dataSaver = dataSaver;
     }
 
-    public void saveData(IDataSaver saver) {
-        System.out.println(this.getClass().getSimpleName() + " about to be saved with " + saver.getClass().getSimpleName());
-        saver.saveEmployeeToDB(this);
-    }
-
-    public int getID() {
-        return ID;
-    }
-
-    public void setID(int ID) {
-        this.ID = ID;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+    public abstract void saveData();
 }

@@ -1,19 +1,15 @@
 package com.epam.patterns.bridge;
 
-public class RankedEmployee extends Employee {
-
+public class RegularEmployee extends Employee {
     private int ID;
     private String name;
-    private String rank;
 
-    public RankedEmployee(int ID, String name, String rank, IDataSaver dataSaver) {
+    public RegularEmployee(int ID, String name, IDataSaver dataSaver) {
         super(dataSaver);
         this.ID = ID;
         this.name = name;
-        this.rank = rank;
     }
 
-    @Override
     public void saveData() {
         System.out.println(this.getClass().getSimpleName() + " about to be saved with " + dataSaver.getClass().getSimpleName());
         dataSaver.saveEmployeeToDB(this);
@@ -33,13 +29,5 @@ public class RankedEmployee extends Employee {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getRank() {
-        return rank;
-    }
-
-    public void setRank(String rank) {
-        this.rank = rank;
     }
 }

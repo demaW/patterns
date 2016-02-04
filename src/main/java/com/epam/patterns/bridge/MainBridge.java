@@ -2,15 +2,16 @@ package com.epam.patterns.bridge;
 
 public class MainBridge {
     public static void main(String[] args){
-        Employee employee = new Employee(1, "John");
-        RankedEmployee rankedEmployee = new RankedEmployee(2, "Nick", "L6");
-
-        DataSaverODBC dataSaverODBC = new DataSaverODBC();
         DataSaverSQL dataSaverSQL = new DataSaverSQL();
 
-        employee.saveData(dataSaverODBC);
+        DataSaverODBC dataSaverODBC = new DataSaverODBC();
 
-        rankedEmployee.saveData(dataSaverSQL);
+        RegularEmployee regularEmployee = new RegularEmployee(1, "John", dataSaverODBC);
+        RankedEmployee rankedEmployee = new RankedEmployee(2, "Nick", "L6", dataSaverSQL);
+
+        regularEmployee.saveData();
+
+        rankedEmployee.saveData();
 
     }
 }
