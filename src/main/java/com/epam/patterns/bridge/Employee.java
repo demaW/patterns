@@ -1,6 +1,6 @@
 package com.epam.patterns.bridge;
 
-public class Employee {
+public class Employee implements IEmployee {
     private int ID;
     private String name;
 
@@ -9,8 +9,8 @@ public class Employee {
         this.name = name;
     }
 
-    public void saveData(IDataSaver saver){
-        System.out.println("Employee about to be saved with " + saver.getClass().getSimpleName());
+    public void saveData(IDataSaver saver) {
+        System.out.println(this.getClass().getSimpleName() + " about to be saved with " + saver.getClass().getSimpleName());
         saver.saveEmployeeToDB(this);
     }
 
