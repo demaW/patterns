@@ -6,7 +6,7 @@ public class BuilderMain {
     public static void main(String[] args){
         DesiredCapabilitiesNoDB capabilitiesNoDB = new DesiredCapabilitiesNoDB();
 
-        GetDesiredCapabilities capabilities = new GetDesiredCapabilities();
+        DesiredCapabilitiesProvider capabilities = new DesiredCapabilitiesProvider();
 
         capabilities.setCapabilitiesBuilder(capabilitiesNoDB);
         capabilities.constructCapabilities();

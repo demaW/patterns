@@ -2,7 +2,7 @@ package com.epam.patterns.builder;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-public class GetDesiredCapabilities {
+public class DesiredCapabilitiesProvider {
     private DesiredCapabilitiesBuilder capabilitiesBuilder;
 
     public void setCapabilitiesBuilder(DesiredCapabilitiesBuilder capabilitiesBuilder){
